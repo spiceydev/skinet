@@ -10,21 +10,8 @@ import { IProduct } from './shared/models/product';
 })
 export class AppComponent implements OnInit {
   title = 'Skinet';
-  products: IProduct[];
 
-  constructor(private http: HttpClient) {
-    this.products = [];
-  }
+  constructor() {}
 
-  ngOnInit(): void {
-    this.http
-      .get<IPagination>('https://localhost:5001/api/products?pageSize=50')
-      .subscribe(
-        (response) => {
-          console.log(`response`, response);
-          this.products = response.data;
-        },
-        (error) => console.error(error)
-      );
-  }
+  ngOnInit(): void {}
 }
