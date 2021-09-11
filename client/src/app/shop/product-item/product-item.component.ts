@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IProduct } from 'src/app/shared/models/product';
+import { ShopService } from '../shop.service';
 
 @Component({
   selector: 'app-product-item',
@@ -9,7 +10,7 @@ import { IProduct } from 'src/app/shared/models/product';
 export class ProductItemComponent implements OnInit {
   @Input() product: IProduct | undefined;
 
-  constructor() {
+  constructor(private shopService: ShopService) {
     this.product = undefined;
   }
 
