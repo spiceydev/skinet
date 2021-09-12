@@ -3,3 +3,4 @@ bin
 API/appsettings.json
 *.db
 .DS_Store
+dump.rdb
